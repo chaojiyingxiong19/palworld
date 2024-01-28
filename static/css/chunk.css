@@ -1,6 +1,6 @@
 @font-face {
     font-family: element-icons;
-    src: url(../fonts/LXGWWenKaiMono-Light.ttf) format("woff"), url(../fonts/LXGWWenKaiMono-Light.ttf) format("truetype");
+    src: url(../fonts/element.woff) format("woff"), url(../fonts/LXGWWenKaiMono-Light.ttf) format("truetype");
     font-weight: 400;
     font-display: "auto";
     font-style: normal
