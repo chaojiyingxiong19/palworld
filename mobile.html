@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Palworld 参数修改</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Palworld 参数修改 一键安装" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .parameter {
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <h3>一键开服，搭建属于自己的幻兽帕鲁服务器：</h3>
+    <div>
+      <a href="https://cloud.tencent.com/developer/article/2382000" target="_blank">1、最全保姆级部署教程（Windows、Linux，含部署、配置游戏参数、内存优化指引）</a>
+    </div>
+    <div>
+      <a href="https://cloud.tencent.com/developer/article/2383000" target="_blank">2、喂饭署教程</a>
+    </div>
+    <div>
+      <a href="https://cloud.tencent.com/developer/article/2382852" target="_blank">3、Docker环境一键部署教程</a>
+    </div>
+    <div>
+      <a href="https://cloud.tencent.com/developer/article/2383571" target="_blank">4、幻兽帕鲁服务器一键更新教程</a>
+    </div>
+    <div>
+      <a href="https://cloud.tencent.com/developer/article/2383187" target="_blank">5、幻兽帕鲁游戏参数设置教程</a>
+    </div>
+    <div>
+      <a href="https://cloud.tencent.com/developer/article/2383775" target="_blank">6、幻兽帕鲁服务器存档备份教程（Windows）</a>
+    </div>
+    <div>
+      <a href="https://cloud.tencent.com/developer/article/2382998" target="_blank">7、幻兽帕鲁服务器存档备份教程</a>
+    </div>
+  </div>
+
+  <div>
+    <h3>云服务器购买优惠链接：</h3>
+    <div>
+      <a href="https://curl.qcloud.com/KyRm9Ub8" target="_blank">游戏服专属特惠</a>
+    </div>
+  </div>
+
+  <div>
+
+    <h1>Palworld 参数修改</h1>
+    <h3>任何从 1 开始的设置都是乘数（设置为 2 将使效果加倍，0.5 将使效果减半）</h3>
+    <div class="parameter">
+      <label for="difficulty">难度（可以设置Casual休闲，Normal正常，Hard困难）：</label>
+      <input type="text" id="difficulty" value="None" />
+      <label for="difficulty1">默认：None 无论设置任何难度也不影響下列调整的参数</label>
+    </div>
+
+    <div class="parameter">
+      <label for="dayTimeSpeedRate">更改白天的持续时间：</label>
+      <input type="text" id="dayTimeSpeedRate" value="1.000000" />
+      <label for="difficulty1">默认：1.000000 推荐范围(0.1 - 5)</label>
+    </div>
+
+    <div class="parameter">
+      <label for="nightTimeSpeedRate">更改夜晚的持续时间：</label>
+      <input type="text" id="nightTimeSpeedRate" value="1.000000" />
+      <label for="difficulty1">默认：1.000000 推荐范围(0.1 - 5)</label>
+    </div>
+
+    <div class="parameter">
+      <label for="expRate">经验值倍率：</label>
+      <input type="text" id="expRate" value="1.000000" />
+    </div>
+
+    <div class="parameter">
+      <label for="palCaptureRate">捕获帕鲁的成功倍率：</label>
+      <input type="text" id="palCaptureRate" value="1.000000" />
+      <label for="difficulty1">默认：1.000000 推荐范围(0.5 - 2)</label>
+    </div>
+
+    <div class="parameter">
+      <label for="palSpawnNumRate">帕鲁出现数量倍率：</label>
+      <input type="text" id="palSpawnNumRate" value="1.000000" />
+      <label for="difficulty1">默认：1.000000 帕鲁的重生数量若调整为2，王固定变2只，野生帕鲁群2~4只
+        PS: 超过3会经常导致帕鲁重叠或掉出地图，请谨慎调整。</label>
+    </div>
+
+    <div class="parameter">
+      <label for="palDamageRateAttack">帕鲁攻击伤害倍率：</label>
+      <input type="text" id="palDamageRateAttack" value="1.000000" />
+    </div>
+
+    <div class="parameter">
+      <label for="palDamageRateDefense">帕鲁承受伤害倍率：</label>
+      <input type="text" id="palDamageRateDefense" value="1.000000" />
+    </div>
+
+    <div class="parameter">
+      <label for="playerDamageRateAttack">玩家造成的伤害倍率：</label>
+      <input type="text" id="playerDamageRateAttack" value="1.000000" />
+      <label for="difficulty1">默认：1.000000 推荐范围(0.1 - 5)</label>
+    </div>
+
+    <div class="parameter">
+      <label for="playerDamageRateDefense">玩家受到的伤害倍率：</label>
+      <input type="text" id="playerDamageRateDefense" value="1.000000" />
+      <label for="difficulty1">默认：1.000000 推荐范围(0.1 - 5)</label>
+    </div>
+
+    <div class="parameter">
+      <label for="playerStomachDecreaceRate">玩家饥饿消耗倍率：</label>
+      <input type="text" id="playerStomachDecreaceRate" value="1.000000" />
+      <label for="difficulty1">默认：1.000000 推荐范围(0.1 - 5)</label>
+    </div>
+
+    <div class="parameter">
+      <label for="playerStaminaDecreaceRate">玩家耐力降低倍率：</label>
+      <input type="text" id="playerStaminaDecreaceRate" value="1.000000" />
+      <label for="difficulty1">默认：1.000000 推荐范围(0.1 - 5)</label>
+    </div>
+
+    <div class="parameter">
+      <label for="PlayerAutoHPRegeneRate">玩家自动HP恢复倍率：</label>
+      <input type="text" id="PlayerAutoHPRegeneRate" value="1.000000" />
+    </div>
+
+    <div class="parameter">
+      <label for="PlayerAutoHpRegeneRateInSleep">玩家睡眠HP恢复倍率：</label>
+      <input type="text" id="PlayerAutoHpRegeneRateInSleep" value="1.000000" />
+    </div>
+
+    <div class="parameter">
+      <label for="palStomachDecreaceRate">帕鲁饥饿消耗倍率：</label>
+      <input type="text" id="palStomachDecreaceRate" value="1.000000" />
+    </div>
+
+    <div class="parameter">
+      <label for="palStaminaDecreaceRate">帕鲁耐力降低倍率：</label>
+      <input type="text" id="palStaminaDecreaceRate" value="1.000000" />
+    </div>
+
+    <div class="parameter">
+      <label for="PalAutoHPRegeneRate">帕鲁HP自动恢复的速度：</label>
+      <input type="text" id="PalAutoHPRegeneRate" value="1.000000" />
+    </div>
+
+    <div class="parameter">
+      <label for="PalAutoHpRegeneRateInSleep">帕鲁睡眠时恢复多少HP倍率：</label>
+      <input type="text" id="PalAutoHpRegeneRateInSleep" value="1.000000" />
+    </div>
+
+    <div class="parameter">
+      <label for="buildObjectDamageRate">建筑伤害倍率：</label>
+      <input type="text" id="buildObjectDamageRate" value="1.000000" />
+    </div>
+
+    <div class="parameter">
+      <label for="buildObjectDeteriorationDamageRate">建筑在一段时间内将受到的伤害倍率：</label>
+      <input type="text" id="buildObjectDeteriorationDamageRate" value="1.000000" />
+    </div>
+
+    <div class="parameter">
+      <label for="collectionDropRate">树木或岩石等物体的掉落倍率：</label>
+      <input type="text" id="collectionDropRate" value="1.000000" />
+    </div>
+
+    <div class="parameter">
+      <label for="collectionObjectHpRate">树木或岩石等物体的血量倍率：</label>
+      <input type="text" id="collectionObjectHpRate" value="1.000000" />
+    </div>
+
+    <div class="parameter">
+      <label for="collectionObjectRespawnSpeedRate">树木或岩石等物体中的刷新速度倍率：</label>
+      <input type="text" id="collectionObjectRespawnSpeedRate" value="1.000000" />
+    </div>
+
+    <div class="parameter">
+      <label for="enemyDropItemRate">敌人掉落物品率：</label>
+      <input type="text" id="enemyDropItemRate" value="1.000000" />
+    </div>
+
+    <div class="parameter">
+      <label for="deathPenalty">死亡惩罚：</label>
+      <select id="deathPenalty">
+        <option value="All">全部掉落</option>
+        <option value="None">无失去</option>
+        <option value="Item">仅失去物品（不包括装备）</option>
+        <option value="ItemAndEquipment">失去物品和装备</option>
+      </select>
+    </div>
+
+    <div class="parameter">
+      <label for="bEnablePlayerToPlayerDamage">启用玩家对玩家伤害：</label>
+      <input type="checkbox" id="bEnablePlayerToPlayerDamage" unchecked />
+    </div>
+
+    <div class="parameter">
+      <label for="bEnableFriendlyFire">启用友军伤害：</label>
+      <input type="checkbox" id="bEnableFriendlyFire" unchecked />
+    </div>
+
+    <div class="parameter">
+      <label for="bEnableInvaderEnemy">启用入侵敌人：</label>
+      <input type="checkbox" id="bEnableInvaderEnemy" checked />
+    </div>
+
+    <div class="parameter">
+      <label for="bActiveUNKO">激活UNKO(意义不明)：</label>
+      <input type="checkbox" id="bActiveUNKO" unchecked />
+    </div>
+
+    <div class="parameter">
+      <label for="bEnableAimAssistPad">启用手柄瞄准辅助：</label>
+      <input type="checkbox" id="bEnableAimAssistPad" checked />
+    </div>
+
+    <div class="parameter">
+      <label for="bEnableAimAssistKeyboard">启用键盘瞄准辅助：</label>
+      <input type="checkbox" id="bEnableAimAssistKeyboard" unchecked />
+    </div>
+
+    <div class="parameter">
+      <label for="dropItemMaxNum">掉落物品最大数量：</label>
+      <input type="text" id="dropItemMaxNum" value="3000" />
+    </div>
+
+    <div class="parameter">
+      <label for="dropItemMaxNum_UNKO">UNKO掉落物品最大数量：</label>
+      <input type="text" id="dropItemMaxNum_UNKO" value="100" />
+    </div>
+
+    <div class="parameter">
+      <label for="baseCampMaxNum">基地最大数量：</label>
+      <input type="text" id="baseCampMaxNum" value="128" />
+    </div>
+
+    <div class="parameter">
+      <label for="baseCampWorkerMaxNum">营地中可以容纳的最大黑奴伙伴数量：</label>
+      <input type="text" id="baseCampWorkerMaxNum" value="15" />
+    </div>
+
+    <div class="parameter">
+      <label for="dropItemAliveMaxHours">掉落的物品在消失之前会停留多长时间：</label>
+      <input type="text" id="dropItemAliveMaxHours" value="1.000000" />
+    </div>
+
+    <div class="parameter">
+      <label for="bAutoResetGuildNoOnlinePlayers">如果没有玩家在线，公会将被解散：</label>
+      <input type="checkbox" id="bAutoResetGuildNoOnlinePlayers" unchecked />
+    </div>
+
+    <div class="parameter">
+      <label for="autoResetGuildTimeNoOnlinePlayers">无在线玩家的公会解散的时间（小时）：</label>
+      <input type="text" id="autoResetGuildTimeNoOnlinePlayers" value="72.000000" />
+    </div>
+
+    <div class="parameter">
+      <label for="guildPlayerMaxNum">公会玩家最大数量：</label>
+      <input type="text" id="guildPlayerMaxNum" value="20" />
+    </div>
+
+    <div class="parameter">
+      <label for="palEggDefaultHatchingTime">孵化帕鲁蛋需要多长时间（小时）：</label>
+      <input type="text" id="palEggDefaultHatchingTime" value="72.000000" />
+    </div>
+
+    <div class="parameter">
+      <label for="workSpeedRate">工作速度倍率：</label>
+      <input type="text" id="workSpeedRate" value="1.000000" />
+    </div>
+
+    <div class="parameter">
+      <label for="bIsMultiplay">bIsMultiplay：</label>
+      <input type="checkbox" id="bIsMultiplay" unchecked />
+    </div>
+
+    <div class="parameter">
+      <label for="bIsPvP">是否PvP：</label>
+      <input type="checkbox" id="bIsPvP" unchecked />
+    </div>
+
+    <div class="parameter">
+      <label for="bCanPickupOtherGuildDeathPenaltyDrop">是否可以拾取其他公会死亡惩罚物品：</label>
+      <input type="checkbox" id="bCanPickupOtherGuildDeathPenaltyDrop" unchecked />
+    </div>
+
+    <div class="parameter">
+      <label for="bEnableNonLoginPenalty">启用非登录惩罚：</label>
+      <input type="checkbox" id="bEnableNonLoginPenalty" checked />
+    </div>
+
+    <div class="parameter">
+      <label for="bEnableFastTravel">启用快速旅行：</label>
+      <input type="checkbox" id="bEnableFastTravel" checked />
+    </div>
+
+    <div class="parameter">
+      <label for="bIsStartLocationSelectByMap">是否根据地图选择初始位置：</label>
+      <input type="checkbox" id="bIsStartLocationSelectByMap" checked />
+    </div>
+
+    <div class="parameter">
+      <label for="bExistPlayerAfterLogout">退出登录后是否存在玩家：</label>
+      <input type="checkbox" id="bExistPlayerAfterLogout" unchecked />
+    </div>
+
+    <div class="parameter">
+      <label for="bEnableDefenseOtherGuildPlayer">启用防御其他公会玩家：</label>
+      <input type="checkbox" id="bEnableDefenseOtherGuildPlayer" unchecked />
+    </div>
+
+    <div class="parameter">
+      <label for="coopPlayerMaxNum">进入领主塔的最大人数：</label>
+      <input type="text" id="coopPlayerMaxNum" value="4" />
+    </div>
+
+    <div class="parameter">
+      <label for="serverPlayerMaxNum">服务器玩家最大数量：</label>
+      <input type="text" id="serverPlayerMaxNum" value="32" />
+    </div>
+
+    <div class="parameter">
+      <label for="serverName">服务器名称：</label>
+      <input type="text" id="serverName" value="Default Palworld Server" />
+    </div>
+
+    <div class="parameter">
+      <label for="serverDescription">服务器描述：</label>
+      <input type="text" id="serverDescription" value="" />
+    </div>
+
+    <div class="parameter">
+      <label for="adminPassword">管理员密码：</label>
+      <input type="password" id="adminPassword" value="" />
+    </div>
+
+    <div class="parameter">
+      <label for="serverPassword">服务器密码：</label>
+      <input type="password" id="serverPassword" value="" />
+    </div>
+
+    <div class="parameter">
+      <label for="publicPort">公共端口：</label>
+      <input type="text" id="publicPort" value="8211" />
+    </div>
+
+    <div class="parameter">
+      <label for="publicIP">公共IP（可以留空，系统会自动检测）：</label>
+      <input type="text" id="publicIP" value="" />
+    </div>
+
+    <div class="parameter">
+      <label for="rconEnabled">启用RCON：</label>
+      <input type="checkbox" id="rconEnabled" unchecked />
+    </div>
+
+    <div class="parameter">
+      <label for="rconPort">RCON 的默认端口号：</label>
+      <input type="text" id="rconPort" value="25575" />
+    </div>
+
+    <div class="parameter">
+      <label for="region">地区：</label>
+      <input type="text" id="region" value="" />
+    </div>
+
+    <!-- 添加其他参数的输入框 -->
+
+    <button onclick="generateCode(true)">生成代码</button>
+    <button onclick="saveAsIniFile()">保存为INI文件</button>
+
+    <script>
+      var generatedCode;
+      function generateCode(copy) {
+        // 获取所有参数的值
+        var difficultyValue = document.getElementById("difficulty").value;
+        var dayTimeSpeedRateValue = document.getElementById("dayTimeSpeedRate").value;
+        var nightTimeSpeedRateValue = document.getElementById("nightTimeSpeedRate").value;
+        var expRateValue = document.getElementById("expRate").value;
+        var palCaptureRateValue = document.getElementById("palCaptureRate").value;
+        var palSpawnNumRateValue = document.getElementById("palSpawnNumRate").value;
+        var palDamageRateAttackValue = document.getElementById("palDamageRateAttack").value;
+        var palDamageRateDefenseValue = document.getElementById("palDamageRateDefense").value;
+        var playerDamageRateAttackValue = document.getElementById("playerDamageRateAttack").value;
+        var playerDamageRateDefenseValue = document.getElementById("playerDamageRateDefense").value;
+        var playerStomachDecreaceRateValue = document.getElementById("playerStomachDecreaceRate").value;
+        var playerStaminaDecreaceRateValue = document.getElementById("playerStaminaDecreaceRate").value;
+        var PlayerAutoHPRegeneRateValue = document.getElementById("PlayerAutoHPRegeneRate").value;
+        var PlayerAutoHpRegeneRateInSleepValue = document.getElementById("PlayerAutoHpRegeneRateInSleep").value;
+        var palStomachDecreaceRateValue = document.getElementById("palStomachDecreaceRate").value;
+        var palStaminaDecreaceRateValue = document.getElementById("palStaminaDecreaceRate").value;
+        var PalAutoHPRegeneRateValue = document.getElementById("PalAutoHPRegeneRate").value;
+        var PalAutoHpRegeneRateInSleepValue = document.getElementById("PalAutoHpRegeneRateInSleep").value;
+        var buildObjectDamageRateValue = document.getElementById("buildObjectDamageRate").value;
+        var buildObjectDeteriorationDamageRateValue = document.getElementById("buildObjectDeteriorationDamageRate").value;
+        var collectionDropRateValue = document.getElementById("collectionDropRate").value;
+        var collectionObjectHpRateValue = document.getElementById("collectionObjectHpRate").value;
+        var collectionObjectRespawnSpeedRateValue = document.getElementById("collectionObjectRespawnSpeedRate").value;
+        var enemyDropItemRateValue = document.getElementById("enemyDropItemRate").value;
+        var deathPenaltyValue = document.getElementById("deathPenalty").value;
+        var bEnablePlayerToPlayerDamageValue = document.getElementById("bEnablePlayerToPlayerDamage").checked;
+        var bEnableFriendlyFireValue = document.getElementById("bEnableFriendlyFire").checked;
+        var bEnableInvaderEnemyValue = document.getElementById("bEnableInvaderEnemy").checked;
+        var bActiveUNKOValue = document.getElementById("bActiveUNKO").checked;
+        var bEnableAimAssistPadValue = document.getElementById("bEnableAimAssistPad").checked;
+        var bEnableAimAssistKeyboardValue = document.getElementById("bEnableAimAssistKeyboard").checked;
+        var dropItemMaxNumValue = document.getElementById("dropItemMaxNum").value;
+        var dropItemMaxNum_UNKOValue = document.getElementById("dropItemMaxNum_UNKO").value;
+        var baseCampMaxNumValue = document.getElementById("baseCampMaxNum").value;
+        var baseCampWorkerMaxNumValue = document.getElementById("baseCampWorkerMaxNum").value;
+        var dropItemAliveMaxHoursValue = document.getElementById("dropItemAliveMaxHours").value;
+        var bAutoResetGuildNoOnlinePlayersValue = document.getElementById("bAutoResetGuildNoOnlinePlayers").checked;
+        var autoResetGuildTimeNoOnlinePlayersValue = document.getElementById("autoResetGuildTimeNoOnlinePlayers").value;
+        var guildPlayerMaxNumValue = document.getElementById("guildPlayerMaxNum").value;
+        var palEggDefaultHatchingTimeValue = document.getElementById("palEggDefaultHatchingTime").value;
+        var workSpeedRateValue = document.getElementById("workSpeedRate").value;
+        var bIsMultiplayValue = document.getElementById("bIsMultiplay").checked;
+        var bIsPvPValue = document.getElementById("bIsPvP").checked;
+        var bCanPickupOtherGuildDeathPenaltyDropValue = document.getElementById("bCanPickupOtherGuildDeathPenaltyDrop").checked;
+        var bEnableNonLoginPenaltyValue = document.getElementById("bEnableNonLoginPenalty").checked;
+        var bEnableFastTravelValue = document.getElementById("bEnableFastTravel").checked;
+        var bIsStartLocationSelectByMapValue = document.getElementById("bIsStartLocationSelectByMap").checked;
+        var bExistPlayerAfterLogoutValue = document.getElementById("bExistPlayerAfterLogout").checked;
+        var bEnableDefenseOtherGuildPlayerValue = document.getElementById("bEnableDefenseOtherGuildPlayer").checked;
+        var coopPlayerMaxNumValue = document.getElementById("coopPlayerMaxNum").value;
+        var serverPlayerMaxNumValue = document.getElementById("serverPlayerMaxNum").value;
+        var serverNameValue = document.getElementById("serverName").value;
+        var serverDescriptionValue = document.getElementById("serverDescription").value;
+        var adminPasswordValue = document.getElementById("adminPassword").value;
+        var serverPasswordValue = document.getElementById("serverPassword").value;
+        var publicPortValue = document.getElementById("publicPort").value;
+        var publicIPValue = document.getElementById("publicIP").value;
+        var rconEnabledValue = document.getElementById("rconEnabled").checked;
+        var rconPortValue = document.getElementById("rconPort").value;
+        var regionValue = document.getElementById("region").value;
+        var bIsStartLocationSelectByMapValue = document.getElementById("bIsStartLocationSelectByMap").checked;
+        var bExistPlayerAfterLogoutValue = document.getElementById("bExistPlayerAfterLogout").checked;
+        var bEnableDefenseOtherGuildPlayerValue = document.getElementById("bEnableDefenseOtherGuildPlayer").checked;
+        var coopPlayerMaxNumValue = document.getElementById("coopPlayerMaxNum").value;
+        var serverPlayerMaxNumValue = document.getElementById("serverPlayerMaxNum").value;
+        var serverNameValue = document.getElementById("serverName").value;
+        var serverDescriptionValue = document.getElementById("serverDescription").value;
+        var adminPasswordValue = document.getElementById("adminPassword").value;
+        var serverPasswordValue = document.getElementById("serverPassword").value;
+        var publicPortValue = document.getElementById("publicPort").value;
+        var publicIPValue = document.getElementById("publicIP").value;
+        var rconEnabledValue = document.getElementById("rconEnabled").checked;
+        var rconPortValue = document.getElementById("rconPort").value;
+        var regionValue = document.getElementById("region").value;
+
+        // 合并参数为代码
+        generatedCode = `[/Script/Pal.PalGameWorldSettings]\nOptionSettings=(Difficulty=${difficultyValue},DayTimeSpeedRate=${dayTimeSpeedRateValue},NightTimeSpeedRate=${nightTimeSpeedRateValue},ExpRate=${expRateValue},PalCaptureRate=${palCaptureRateValue},PalSpawnNumRate=${palSpawnNumRateValue},PalDamageRateAttack=${palDamageRateAttackValue},PalDamageRateDefense=${palDamageRateDefenseValue},PlayerDamageRateAttack=${playerDamageRateAttackValue},PlayerDamageRateDefense=${playerDamageRateDefenseValue},PlayerStomachDecreaceRate=${playerStomachDecreaceRateValue},PlayerStaminaDecreaceRate=${playerStaminaDecreaceRateValue},PlayerAutoHPRegeneRate=${PlayerAutoHPRegeneRateValue},PlayerAutoHpRegeneRateInSleep=${PlayerAutoHpRegeneRateInSleepValue},PalStomachDecreaceRate=${palStomachDecreaceRateValue},PalStaminaDecreaceRate=${palStaminaDecreaceRateValue},PalAutoHPRegeneRate=${PalAutoHPRegeneRateValue},PalAutoHpRegeneRateInSleep=${PalAutoHpRegeneRateInSleepValue},BuildObjectDamageRate=${buildObjectDamageRateValue},BuildObjectDeteriorationDamageRate=${buildObjectDeteriorationDamageRateValue},CollectionDropRate=${collectionDropRateValue},CollectionObjectHpRate=${collectionObjectHpRateValue},CollectionObjectRespawnSpeedRate=${collectionObjectRespawnSpeedRateValue},EnemyDropItemRate=${enemyDropItemRateValue},DeathPenalty=${deathPenaltyValue},bEnablePlayerToPlayerDamage=${bEnablePlayerToPlayerDamageValue},bEnableFriendlyFire=${bEnableFriendlyFireValue},bEnableInvaderEnemy=${bEnableInvaderEnemyValue},bActiveUNKO=${bActiveUNKOValue},bEnableAimAssistPad=${bEnableAimAssistPadValue},bEnableAimAssistKeyboard=${bEnableAimAssistKeyboardValue},DropItemMaxNum=${dropItemMaxNumValue},DropItemMaxNum_UNKO=${dropItemMaxNum_UNKOValue},BaseCampMaxNum=${baseCampMaxNumValue},BaseCampWorkerMaxNum=${baseCampWorkerMaxNumValue},DropItemAliveMaxHours=${dropItemAliveMaxHoursValue},bAutoResetGuildNoOnlinePlayers=${bAutoResetGuildNoOnlinePlayersValue},AutoResetGuildTimeNoOnlinePlayers=${autoResetGuildTimeNoOnlinePlayersValue},GuildPlayerMaxNum=${guildPlayerMaxNumValue},PalEggDefaultHatchingTime=${palEggDefaultHatchingTimeValue},WorkSpeedRate=${workSpeedRateValue},bIsMultiplay=${bIsMultiplayValue},bIsPvP=${bIsPvPValue},bCanPickupOtherGuildDeathPenaltyDrop=${bCanPickupOtherGuildDeathPenaltyDropValue},bEnableNonLoginPenalty=${bEnableNonLoginPenaltyValue},bEnableFastTravel=${bEnableFastTravelValue},bIsStartLocationSelectByMap=${bIsStartLocationSelectByMapValue},bExistPlayerAfterLogout=${bExistPlayerAfterLogoutValue},bEnableDefenseOtherGuildPlayer=${bEnableDefenseOtherGuildPlayerValue},CoopPlayerMaxNum=${coopPlayerMaxNumValue},ServerPlayerMaxNum=${serverPlayerMaxNumValue},ServerName="${serverNameValue}",ServerDescription="${serverDescriptionValue}",AdminPassword="${adminPasswordValue}",ServerPassword="${serverPasswordValue}",PublicPort=${publicPortValue},PublicIP="${publicIPValue}",RCONEnabled=${rconEnabledValue},RCONPort=${rconPortValue},Region="${regionValue}",bUseAuth=true,BanListURL="https://api.palworldgame.com/api/banlist.txt")`;
+
+        // 复制到粘贴板
+        copy && copyToClipboard(generatedCode);
+      }
+
+      // 添加保存成INI文件并下载的功能
+      function saveAsIniFile() {
+        generateCode(false);
+        var blob = new Blob([generatedCode], { type: "text/plain" });
+        var link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "PalWorldSettings.ini";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+
+      function copyToClipboard(text) {
+        if (!navigator.clipboard) {
+          var textarea = document.createElement("textarea");
+          textarea.value = text;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand("copy");
+          document.body.removeChild(textarea);
+          alert("文本已成功复制到剪贴板");
+        } else {
+          navigator.clipboard
+            .writeText(text)
+            .then(function () {
+              alert("文本已成功复制到剪贴板");
+            })
+            .catch(function (err) {
+              alert("复制到剪贴板失败:", err);
+            });
+        }
+      }
+    </script>
+</body>
+
+</html>
